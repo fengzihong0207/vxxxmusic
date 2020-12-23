@@ -1,4 +1,4 @@
-# pornmusic
+# v-xxx music
 
 ## Project setup
 ```
@@ -15,5 +15,11 @@ npm run serve
 npm run build
 ```
 
+## API文档
+```
+$ git clone https://github.com/Binaryify/NeteaseCloudMusicApi.git
+$ npm install
+$ npm start
+```
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
