@@ -1,0 +1,276 @@
+.audioplay {
+    overflow: hidden;
+
+    .audioplay-box {
+        padding: 10px;
+    }
+
+    .paused{
+        animation-play-state: paused !important;
+    }
+    .running{
+        animation-play-state: running !important;
+    }
+
+    .blur-bgimg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        opacity: .6;
+        -webkit-filter: blur(20px);
+        filter: blur(20px);
+
+        img {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font-weight: 400;
+            vertical-align: baseline;
+        }
+    }
+
+    .audio-top-box {
+        position: relative;
+    }
+
+    .goback-btn {
+        position: absolute;
+        left: 0;
+        top: 2px;
+        font-size: 30px;
+
+        .van-icon {
+            margin: 5px 0;
+        }
+    }
+
+    .audio-top-songname {
+        text-align: center;
+    }
+
+    .song-name {
+        font-size: 20px;
+    }
+
+    .song-artis {
+        font-size: 16px;
+        margin-left: 15px;
+    }
+
+    .go-artis {
+        .van-icon {
+            top: 1px;
+        }
+    }
+
+    .audio-play-middle {
+        height: 370px;
+        margin-top: 40px;
+        overflow-y: scroll;
+    }
+
+    .audio-lyrics-box {
+        padding: 20px 10px 10px;
+        position: relative;
+        height: 370px;
+    }
+
+    .audio-lyrics {
+        text-align: center;
+        transition: linear 0.1s;
+        position: absolute;
+        left: 0;
+        width: 100%;
+    }
+
+    .lyrics-item {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+
+    .lyrics-item.active {
+        color: #ff0033;
+        font-size: 18px;
+    }
+
+    .song-img-animation {
+        width: 100%;
+        height: 30%;
+    }
+
+    .cd-wapper {
+        width: 86%;
+        height: 305px;
+        margin: 0 7%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .cd-play {
+        border: 10px solid rgba(102, 99, 99, 0.1);
+        border-radius: 50%;
+        position: absolute;
+        animation: cdplay 20s linear infinite;
+        img {
+            border-radius: 50%;
+        }
+    }
+
+    .animation {
+        animation: cdplay 20s linear infinite;
+    }
+
+    @keyframes cdplay {
+        0% {
+            transform: rotate(0);
+        }
+
+        100% {
+            transform: rotate(1turn);
+        }
+    }
+
+    .playing-lyric-wrapper {
+        width: 80%;
+        margin: 30px auto 0;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    .playing-lyric {
+        height: 20px;
+        line-height: 20px;
+        font-size: 16px;
+        color: #ff0033;
+        font-weight: bold;
+    }
+
+    .audio-contorl {
+        width: 100%;
+        height: 70px;
+    }
+
+    .song-like-tabs {
+        margin-top: 30px;
+        padding-bottom: 5px;
+
+        .van-icon {
+            color: #ff0033;
+        }
+    }
+
+    .mv-like-box {
+        display: flex
+    }
+
+    .mv-like-box {
+        display: flex;
+    }
+
+    .mv-like-item {
+        text-align: center;
+        flex: 1;
+
+        .van-icon {
+            font-size: 27px;
+        }
+    }
+
+    .mv-count {
+        color: #ff0033;
+        font-size: 12px;
+    }
+
+    .audioplayer {
+        width: 100%;
+        height: 70px;
+        margin-top: 20px;
+    }
+
+    .van-popup {
+        height: 60%;
+    }
+
+    .van-popup--bottom {
+        bottom: 10px;
+        left: 0;
+        width: 90%;
+        margin: 0 5%;
+        border-radius: 20px;
+    }
+
+    .audio-list {
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .audio-list-title {
+        text-align: left;
+        padding-left: 10px;
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    .song-list-name {
+        max-width: calc(100% - 16px);
+    }
+
+    .audio-item {
+        margin-bottom: 15px;
+        font-size: 16px;
+    }
+
+    .van-icon {
+        margin: 2px 0;
+        color: #ccc;
+    }
+
+    .audio-active {
+        color: #ff0033;
+    }
+    .musicani{
+
+        margin-top: 3px;
+    }
+    .spectrum{
+        width: 5px;
+        height: 15px;
+        margin-left: 5px;
+        background: #000000;
+        display: inline-block;
+        border-radius: 6px;
+        transform-origin: bottom;
+        animation: dancing 1s ease-in-out infinite;
+    }
+    .spectrum1{
+        background-color: #ff0033;
+        animation-delay: 0.1s;
+    }
+    .spectrum2{
+        background-color: #ff0033;
+        animation-delay: 0.3s;
+    }
+    .spectrum3{
+        background-color: #ff0033;
+        animation-delay: 0.5s;
+    }
+
+    @keyframes dancing{
+        0%{
+            transform: scaleY(0.1);
+        }
+        50%{
+            transform: scaleY(1.1);
+        }
+        100%{
+            transform: scaleY(0.1);
+        }
+    }
+}

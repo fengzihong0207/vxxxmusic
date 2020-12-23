@@ -1,32 +1,74 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <Audioplay class="Audioplay" :class="audioplayshow?'':'disnone'"> </Audioplay>
+
+    <router-view class="router" :class="audioplayshow?'disnone':''"></router-view>
   </div>
 </template>
 
+<script>
+import Audioplay from "./views/Audioplay";
+import 'vue-video-player/src/custom-theme.css'
+import 'video.js/dist/video-js.css'
+
+export default {
+  name: "App",
+  components: {
+    Audioplay,
+  },
+  data() {
+    return {};
+  },
+ computed:{
+   audioplayshow() {
+      return this.$store.state.isaudioplayshow;
+    },
+ }
+};
+</script>
+
 <style lang="less">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+body {
+  font-size: 14px;
+  touch-action: none;
 }
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+#app {
+  touch-action: none;
+}
+.autoimg {
+  width: 100%;
+  display: block;
+}
+.one-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.two-text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  text-overflow: ellipsis;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.Audioplay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.disnone{
+  display: none;
 }
 </style>

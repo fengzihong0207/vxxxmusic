@@ -1,0 +1,200 @@
+.my{
+    padding-bottom: 80px;
+    background-color: #f2f2f2;
+
+    /deep/.van-search {
+        border-radius: 23px;
+        overflow: hidden;
+    }
+
+    // 我的信息
+    .my-information{
+        width: 100%;
+        height: 64px;
+        overflow: hidden;
+        padding: 30px 0 0 ;
+        .my-information-box{
+            padding: 0 20px;
+        }
+        .my-img-box{
+            width: 64px;
+            height: 64px;
+            background-color: #fff;
+            border-radius: 50%;
+            overflow: hidden;
+            
+            .auto-img{
+                width: 100%;
+                display: block;
+            }
+        }
+
+        .my-name-lv-icon{
+            padding-left: 12px;
+            width: calc(~"100% - 64px");
+            height: 64px;
+            box-sizing: border-box;
+            position: relative;
+
+            .my-name{
+                height: 30px;
+                margin-top: 5px;
+                color: #333;
+                font-size: 16px;
+                line-height: 30px;
+            }
+            .my-lv{
+                width: 34px;
+                height: 14px;
+                background-color: #ff0033;
+                margin-top: 4px;
+                color: #fff;
+                font-size: 12px;
+                text-align: center;
+                line-height: 14px;
+                border-radius: 7px;
+            }
+            .my-icon{
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 64px;
+                height: 64px;
+                // text-align: center;
+
+                /deep/ .van-icon{
+                    margin-top: 20px;
+                    margin-left: 35px;
+                }
+            }
+        }
+    }
+
+    // 我喜欢/收藏MV/历史/安全中心
+    .my-item-box{
+        margin: 32px 15px;
+        padding: 8px 16px;
+        height: 86px;
+        background-color: #fff;
+        border-radius: 8px;
+        overflow: hidden;
+        box-sizing: border-box;
+        display: flex;
+
+        >div{
+            flex: 1;
+        }
+
+        .my-item{
+
+            .my-item-icon{
+                margin-left: 14px;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                overflow: hidden;
+                text-align: center;
+                line-height: 50px;
+
+                /deep/ .van-icon{
+                    margin-top: 7px;
+                }
+            }
+            .my-item-title{
+                height: 20px;
+                color: #777;
+                text-align: center;
+                line-height: 20px;
+
+            }
+        }
+    }
+
+
+    //我的歌单
+    .my-playlist{
+        // margin: 15px;
+        // background-color: #fff;
+
+
+        .playlist-create-collect{
+            position: relative;
+            margin-top: 8px;
+
+            /deep/.van-tabs__nav{
+                background-color: #f2f2f2;
+            }
+            .van-tabs__nav::after{
+                content: '';
+                position: absolute;
+                left: 50%;
+                top: 14px;
+                width: 1px;
+                height: 16px;
+                background-color: #ccc;
+                margin-left: -0.5px;
+            }
+
+        }
+
+        .item-box{
+            padding-bottom: 1px;
+            margin: 15px;
+            // height: 300px;
+            background-color: #fff;
+            border-radius: 8px;
+
+            .item-title-set{
+                padding: 12px 15px;
+                color: #999;
+                font-size: 12px;
+                overflow: hidden;
+                position: relative;
+            }
+            .item-set{
+                position: absolute;
+                top: 10px;
+                right: 15px;
+                width: 20px;
+                height: 20px;
+                
+            }
+            .auto-img{
+                width: 100%;
+                display: block;
+            }
+
+
+            // 单个歌单
+            .item-content{
+                margin: 0 12px 15px;
+                height: 60px;
+                overflow: hidden;
+
+                .content-img{
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 8px;
+                    overflow: hidden;
+                }
+                .content-name-count{
+                    padding: 0px 8px;
+                    width: calc(~"100% - 76px");
+                    height: 60px;
+                }
+                .content-name{
+                    padding: 4px 0;
+                    color: #333;
+                    font-size: 16px;
+                }
+                .content-count{
+                    color: #999;
+                    margin-top: 8px;
+                }
+            }
+        }
+    }
+
+
+
+}

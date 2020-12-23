@@ -1,0 +1,137 @@
+.singerlist{
+
+    background-color: #f2f2f2;
+
+    .auto-img{
+        width: 100%;
+        display: block;
+    }
+    .paused{
+        animation-play-state: paused !important;
+    }
+    .running{
+        animation-play-state: running !important;
+    }
+
+    /deep/.van-nav-bar .van-icon{
+        color: #ff0033;
+    }
+    /deep/.van-nav-bar__text{
+        color: #ff0033;
+    }
+
+    .player{
+        width: 30px;
+        height: 30px;
+        background-color: #eee;
+        border-radius: 15px;
+        overflow: hidden;
+        animation: cdplay 20s linear infinite;
+    }
+    @keyframes cdplay {
+        0% {
+            transform: rotate(0);
+        }
+
+        100% {
+            transform: rotate(1turn);
+        }
+    }
+
+    // 歌手分类
+    .classify-box{
+        padding: 15px 12px;
+        // background-color: rgb(99, 166, 230);
+
+        .title{
+            height: 38px;
+            color: #333;
+            font-size: 18px;
+            line-height: 38px;
+        }
+        .classify{
+            font-size: 12px;
+            margin-top: 5px;
+
+            .type{
+                overflow: hidden;
+            }
+            .area{
+                margin: 10px 0;
+                overflow: hidden;
+            }
+            .item{
+                margin: 0 6px;
+                width: 40px;
+                height: 24px;
+                text-align: center;
+                line-height: 24px;
+                color: #444;
+                background-color: #fff;
+                border-radius: 12px;
+                overflow: hidden;
+            }
+            .active{
+                color: #fff;
+                background-color: #ff0033;
+            }
+        }
+    }
+
+
+
+    //歌手列表bgc
+    .singer-list-box{
+        padding: 0 12px 10px;
+        overflow: hidden;
+        background-color: #fff;
+
+        .title{
+            margin: 8px 0;
+            color: #999;
+            font-size: 12px;
+        }
+
+        .item{
+            margin: 10px 0;
+            height: 60px;
+            // background-color: #fff;
+            overflow: hidden;
+
+            .item-img{
+                width: 60px;
+                height: 60px;
+                background-color: #eee;
+                border-radius: 50%;
+                overflow: hidden;
+            }
+
+            .name-size{
+                padding-left: 8px;
+                width: calc(~"100% - 68px");
+                height: 60px;
+                // background-color: rgb(114, 193, 230);
+
+                .name{
+                    margin-top: 9px;
+                    color: #333;
+                    font-size: 16px;
+                }
+                .size{
+                    margin-top: 5px;
+                    color: #999;
+                    font-size: 12px;
+                    overflow: hidden;
+                }
+                .album-size{
+                    margin-left: 10px;
+                }
+            }
+            
+        }
+
+
+
+    }
+
+}

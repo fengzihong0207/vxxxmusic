@@ -1,0 +1,388 @@
+.singer{
+
+    background-color: #f2f2f2;
+
+    .auto-img{
+        width: 100%;
+        display: block;
+    }
+
+    /deep/.van-nav-bar .van-icon{
+        color: #ff0033;
+    }
+    /deep/.van-nav-bar__text{
+        color: #ff0033;
+    }
+
+    .player{
+        width: 30px;
+        height: 30px;
+        background-color: #eee;
+        border-radius: 15px;
+        overflow: hidden;
+        animation: cdplay 20s linear infinite;
+    }
+
+    @keyframes cdplay {
+        0% {
+            transform: rotate(0);
+        }
+
+        100% {
+            transform: rotate(1turn);
+        }
+    }
+
+
+    //歌手背景
+    .bg-content-box{
+        height: 305px;
+        overflow: hidden;
+        position: relative;
+        margin-top: -46px;
+
+        .content-box{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            padding-bottom: 18px;
+            padding-left: 12px;
+            padding-right: 12px;
+            color: #fff;
+
+            .name{
+                font-size: 20px;
+            }
+            .ranking{
+                margin-top: 10px;
+                font-size: 14px;
+            }
+            .des{
+                margin-top: 10px;
+                font-size: 12px;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+            .des-detail-box{
+                width: 200px;
+                padding: 8px;
+                margin: 0;
+                color: #999;
+                font-size: 12px;
+                
+            }
+            /deep/.van-popup--center{
+                border-radius: 8px;
+                overflow: hidden;
+            }
+
+        }
+
+        .like{
+            position: absolute;
+            right: 12px;
+            bottom: 60px;
+            width: 46px;
+            height: 24px;
+            font-size: 12px;
+            color: #fff;
+            background-color: #ff0033;
+            text-align: center;
+            line-height: 24px;
+            border-radius: 12px;
+        }
+
+    }
+
+
+
+    //歌手音乐信息
+    .singer-info{
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        overflow: hidden;
+        background-color: #fff;
+        margin-top: -8px;
+
+        /deep/.van-tabs--line .van-tabs__wrap{
+            height: 36px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .item-box{
+            padding: 12px;
+            // height: 150px;
+        }
+
+
+        // 歌曲
+        .item-des{
+            font-size: 16px;
+        }
+        .item-main{
+            margin: 12px 0;
+            height: 50px;
+            overflow: hidden;
+
+            .number{
+                width: 16px;
+                height: 50px;
+                font-size: 12px;
+                text-align: center;
+                line-height: 50px;
+                color: #999;
+            }
+            .main{
+                padding: 0 10px;
+                width: calc(~"100% - 36px");
+                height: 50px;
+                overflow: hidden;
+
+                .name-from{
+                    max-width: 290px;
+                    overflow: hidden;
+
+                    .name{
+                        font-size: 16px;
+                        color: #333;
+                        margin-top: 3px;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 1;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                    }
+                    .from{
+                        color: #999;
+                        font-size: 12px;
+                        margin-top: 5px;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 1;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                    }
+                }
+                .option{
+                    width: 18px;
+                    height: 50px;
+                    z-index: 99;
+                }
+                .option-icon{
+                    margin-top: 16px;
+                    
+                }
+            }
+
+
+            // 专辑
+            .item-img-box{
+                width: 50px;
+                height: 50px;
+                background-color: #eee;
+            }
+            .main2{
+                padding: 0 10px;
+                width: calc(~"100% - 70px");
+                height: 50px;
+                overflow: hidden;
+
+                .name-time{
+                    // max-width: 290px;
+                    overflow: hidden;
+
+                    .name{
+                        font-size: 16px;
+                        color: #333;
+                        margin-top: 3px;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 1;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                    }
+                    .time{
+                        color: #999;
+                        font-size: 12px;
+                        margin-top: 5px;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 1;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+
+
+        //MV
+        .item-main3{
+            margin: 12px 0;
+            height: 70px;
+            overflow: hidden;
+
+            .main3-img-box{
+                width: 120px;
+                height: 70px;
+                border-radius: 4px;
+                overflow: hidden;
+                position: relative;
+
+                .mv-play-count{
+                    position: absolute;
+                    top: 3px;
+                    right: 5px;
+                    height: 14px;
+                    font-size: 12px;
+                    overflow: hidden;
+                    line-height: 14px;
+
+                    .count-img{
+                        width: 14px;
+                        height: 14px;
+                        
+                        .play-img{
+                            width: 100%;
+                            display: block;
+                        }
+                    }
+                    .count{
+                        color: #fff;
+                        height: 14px;
+                        margin-left: 1px;
+                    }
+                }
+
+
+
+                .auto-img{
+                    margin-top: -10px;
+                }
+            }
+
+            .main3{
+                padding: 15px 8px;
+                width: calc(~"100% - 136px");
+                height: 70px;
+
+                .main3-name{
+                    color: #333;
+                    font-size: 16px;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 1;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                }
+                .main3-time{
+                    color: #999;
+                    font-size: 12px;
+                    margin-top: 5px;
+                }
+            }
+        }
+
+    }
+
+
+
+
+    //歌曲弹出层
+    .img-name-singer-box{
+        padding: 10px 15px;
+        height: 45px;
+        border-bottom: 1px solid #eee;
+        overflow: hidden;
+
+        .img-box{
+            width: 45px;
+            height: 45px;
+            background-color: #eee;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .name-singer-box{
+            margin-top: 5px;
+            padding-left: 10px;
+            width: calc(~"100% - 55px");
+            height: 45px;
+            
+
+            .name{
+                color: #333;
+                font-size: 14px;
+            }
+            .singer-box{
+                color: #999;
+                font-size: 12px;
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+        }
+    }
+
+    .select-item{
+        padding: 15px 20px;
+        color: #333;
+        font-size: 14px;
+        overflow: hidden;
+        line-height: 19px;
+
+        
+        .icon-box{
+            width: 19px;
+            height: 19px;
+        }
+        .title{
+            margin-left: 8px;
+        }
+        .content{
+            margin-left: 4px;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+    }
+    .select-item:active{
+        background-color: #ddd;
+    }
+
+
+
+    // 歌手选择弹出层
+    .singer-choose-title{
+        padding-left: 18px;
+        height: 32px;
+        color: #999;
+        font-size: 12px;
+        background-color: #eee;
+        line-height: 32px;
+    }
+    .choose-item{
+        padding: 5px 12px;
+        height: 50px;
+        overflow: hidden;
+
+        .item-img{
+            width: 50px;
+            height: 50px;
+            background-color: #eee;
+            border-radius: 4px;
+            overflow: hidden;
+
+        }
+        .item-name{
+            padding-left: 15px;
+            width: calc(~"100% - 65px");
+            height: 50px;
+            font-size: 14px;
+            color: #333;
+            line-height: 50px;
+        }
+    }
+
+
+
+
+}
